@@ -1,11 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Dancing+Script:wght@700&family=Fira+Code:wght@300&family=Lora&family=Shalimar&family=Ubuntu:wght@700&display=swap");
+
+/* colors */
+:root {
+	--color-hue: 180;
+	--color-primary: hsl(var(--color-hue), 50%, 50%);
+
+	/* body color */
+	--color-primary-light-body: hsl(var(--color-hue), 50%, 40%);
+
+	/* color font */
+	--color-font: hsl(var(--color-hue), 70%, 20%);
+
+	/* color outside heading */
+	--color-font-head: hsl(var(--color-hue), 70%, 80%);
+	/* color name */
+	--color-font-name: hsl(240, 100%, 20%);
+
+	/* color button */
+	--color-font-btn: hsl(var(--color-hue), 30%, 10%);
+}
+.dark-mode {
+	--color-primary-light-body: hsl(var(--color-hue), 50%, 20%);
+	--color-font: hsl(var(--color-hue), 70%, 20%);
+	--color-font-btn: hsl(var(--color-hue), 30%, 20%);
+	--color-font-name: hsl(240, 70%, 70%);
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 body {
-	background: rgb(126, 198, 240);
+	background: var(--color-primary-light-body);
+	font-family: "Lora", serif;
+}
+.btn-toogle {
+	align-items: flex-end;
 }
 
 form {
@@ -18,9 +49,11 @@ header {
 	justify-content: center;
 	text-align: center;
 	min-height: 14vh;
+	color: hsl(var(--color-hue), 70%, 80%);
 }
 .name {
 	color: blue;
+	color: var(--color-font-name);
 }
 form input {
 	min-width: 42vw;
@@ -31,12 +64,14 @@ form input {
 	border: none;
 	border-radius: 0.5rem;
 	margin-left: 0.2em;
+	color: var(--color-font);
 }
 .btn1 {
 	border: none;
 	padding: 0.5em 1em;
 	min-width: 10vw;
 	border-radius: 0.5rem;
+	color: var(--color-font-btn);
 }
 .btn1:hover {
 	cursor: pointer;
@@ -66,7 +101,7 @@ form input {
 	text-align: center;
 	padding-left: 0.4rem;
 	flex: 1;
-	/* min-height: 9vh; */
+	color: var(--color-font);
 }
 .done {
 	border: none;
@@ -75,6 +110,7 @@ form input {
 	background: rgb(138, 138, 230);
 	margin-right: 0.2em;
 	border-radius: 0.5rem;
+	color: var(--color-font-btn);
 }
 
 .notdone {
@@ -83,6 +119,7 @@ form input {
 	cursor: pointer;
 	background: rgb(233, 233, 215);
 	border-radius: 0.5rem;
+	color: var(--color-font-btn);
 }
 
 @media screen and (min-width: 700px) {

@@ -1,10 +1,21 @@
+// all select constant
 const formInput = document.querySelector(".form_input");
 const btn = document.querySelector(".btn1");
 const apendDiv = document.querySelector(".input_container ");
 const todolist = document.querySelector(".todolist ");
+const dm = document.querySelector(".btn-toogle");
+
+// add class to the body
+const bdy = document.body;
+bdy.classList.add("dark-mode");
+console.log(bdy.classList);
+
+// Add user name
+let span = document.querySelector(".name");
+const userName = prompt(" Enter Your Name ");
+span.textContent = userName;
 
 // event listner for apend new div
-
 btn.addEventListener("click", (e) => {
 	e.preventDefault();
 
@@ -58,5 +69,17 @@ todolist.addEventListener("click", (e) => {
 		todo.addEventListener("transitionend", () => {
 			todo.remove();
 		});
+	}
+});
+
+// adding dark mode
+dm.addEventListener("click", (e) => {
+	e.preventDefault();
+	if (bdy.classList.contains("dark-mode")) {
+		bdy.classList.remove("dark-mode");
+		dm.textContent = "Dark-Mode";
+	} else {
+		bdy.classList.add("dark-mode");
+		dm.textContent = "Light-Mode";
 	}
 });
