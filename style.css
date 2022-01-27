@@ -67,8 +67,9 @@ form input {
 	color: var(--color-font);
 }
 .btn1 {
+	margin: 0.2rem;
 	border: none;
-	padding: 0.5em 1em;
+	padding: 1em 1em;
 	min-width: 10vw;
 	border-radius: 0.5rem;
 	color: var(--color-font-btn);
